@@ -1,0 +1,25 @@
+/* Fuentes */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1a1f23;
+  font-family: "Open Sans", sans-serif;
+  padding: 20px;
+}
+
+div.margen {
+  border: 5px solid #6e6cf3;
+  border-radius: 9px;
+  width: 93%;
+  height: 86vh;
+  padding: 20px 30px;
+}
+
+h1 {
+  color: #ffffff;
+}
