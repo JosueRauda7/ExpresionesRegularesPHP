@@ -1,5 +1,7 @@
-section {
+.section {
   margin: 40px auto;
+  flex-flow: column;
+  align-items: center;
 }
 
 span.encontrado {
@@ -9,9 +11,13 @@ span.encontrado {
 
 p {
   font-family: "Open Sans", sans-serif;
+  margin: 20px auto;
+  color: #ffffff;
 }
 
 .enlace {
   display: block;
   width: 100%;
+  margin: 20px auto;
+  text-align: center;
 }

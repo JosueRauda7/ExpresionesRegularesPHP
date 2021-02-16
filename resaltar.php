@@ -17,26 +17,22 @@
       <div class="hr"></div>
       <h3>Resaltar palabras de un párrafo</h3>
     </header>
-    <section>
+    <section class="section">
       <h2>Resultado de la búsqueda</h2>
       <?php
-      if (isset($_POST) && strlen($_POST['parrafo']) == 0 && strlen($_POST['txt-buscar']) == 0) {
-        $expresion = $_POST['txt-buscar'];
-        $parrafo = $_POST['parrafo'];
+      $patron = $_POST['txt-buscar'];
+      $parrafo = $_POST['parrafo'];
 
-        $nuevo_texto = preg_split($expresion, $parrafo, $limit = -1);
-        echo $nuevo_texto, count($parrafo);
+      // Uso de expresión regular y uso de preg_replace
+      $nuevo_parrafo = preg_replace('/' . $patron . '/i', "<span class=\"encontrado\">$patron</span>", $parrafo);
 
-        $html = "<p>\n";
-        for ($i = 0; $i < count($parrafo); $i++) {
-          if ($nuevo_texto[$i] == $_POST['txt-buscar']) {
-            $html .= "<span class=\"encontrado\">$nuevo_texto[$i]</span>";
-          } else {
-            $html .= "$nuevo_texto[$i]";
-          }
-        }
-        $html = "</p>\n";
-      }
+      // Añadiendo <br /> a los saltos de línea
+      $parrafo_final = preg_replace('/[\-]/', '<br />-', $nuevo_parrafo);
+
+      $html = "<p>\n";
+      $html .= "\t$parrafo_final\n";
+      $html .= "</p>\n";
+      echo $html;
       ?>
       <div class="enlace">
         <a href="index.html" class="button">Regresar</a>

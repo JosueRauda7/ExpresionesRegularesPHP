@@ -56,11 +56,15 @@ div.margen {
   overflow-y: scroll;
 }
 
-.margen::-webkit-scrollbar {
+/* .margen::-webkit-scrollbar {
   width: 20px;
   height: 100px;
   display: none;
-}
+} */
+
+/* .margen::-webkit-scrollbar-thumb {
+
+} */
 
 /* Content */
 
