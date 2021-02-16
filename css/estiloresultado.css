@@ -1,0 +1,17 @@
+section {
+  margin: 40px auto;
+}
+
+span.encontrado {
+  background-color: #01cbbe;
+  color: #ffffff;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.enlace {
+  display: block;
+  width: 100%;
+}
